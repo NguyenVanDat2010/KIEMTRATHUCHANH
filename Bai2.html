@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 02</title>
+</head>
+<body>
+<script>
+    function tryRemoteFromArray(arr , x) {
+        for (let i = 0; i <= arr.length; i++) {
+            if (x == arr[i]) {
+                arr.splice(i , 1);
+                i = 0;
+                if (arr.length == 1) {
+                    i--;
+                }
+            }
+        }
+        return arr;
+    }
+
+    console.log(tryRemoteFromArray([1 , 6 , 2 , 9 , 4 , 5] , 2));
+</script>
+</body>
+</html>

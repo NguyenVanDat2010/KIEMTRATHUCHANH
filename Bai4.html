@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 04</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="500" style="border: 1px solid red"></canvas>
+<script>
+    let Circle = function (x , y , radius , color) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+
+        this.getRadius = function () {
+            return this.radius;
+        };
+        this.setRadius = function (radius) {
+            this.radius = radius;
+        };
+        this.render = function () {
+            let context = document.getElementById('myCanvas').getContext('2d');
+            context.beginPath();
+            context.fillStyle = this.color;
+            context.arc(this.x , this.y , this.radius , 0 , 2 * Math.PI);
+            context.fill();
+        }
+    };
+
+    let circle = new Circle(10 , 10 , 100 , '#000000');
+    circle.render();
+</script>
+</body>
+</html>

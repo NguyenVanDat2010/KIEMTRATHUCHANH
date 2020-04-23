@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 03</title>
+</head>
+<body>
+<script>
+    function isFibonancy(n) {
+        let f0 = 0 , f1 = 1 , f2;
+        for (let i = 0; i <= n; i++) {
+            f2 = f0 + f1;
+            f0 = f1;
+            f1 = f2;
+            if (f2 == n) {
+                return true;
+            }
+        }
+        return false;
+    }
+    console.log(isFibonancy(8));
+</script>
+</body>
+</html>
